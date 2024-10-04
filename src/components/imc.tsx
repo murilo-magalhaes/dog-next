@@ -1,7 +1,7 @@
 'use client';
 
+import toFixed from '@/utils/number/toFixed';
 import React from 'react';
-import toFixed from '../../utils/number/toFixed';
 
 export default function IMC() {
   const [altura, setAltura] = React.useState(0);

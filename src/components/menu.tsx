@@ -15,6 +15,9 @@ export default function Menu() {
       <li>
         <Link href="/imc">IMC</Link>
       </li>
+      <li>
+        <Link href="/produtos">Produtos</Link>
+      </li>
     </ul>
   );
 }
