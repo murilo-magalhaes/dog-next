@@ -10,9 +10,6 @@ export default function Menu() {
         <Link href="/sobre">Sobre</Link>
       </li>
       <li>
-        <Link href="/contato">Contato</Link>
-      </li>
-      <li>
         <Link href="/imc">IMC</Link>
       </li>
       <li>
@@ -20,6 +17,12 @@ export default function Menu() {
       </li>
       <li>
         <Link href="/cursos">Cursos</Link>
+      </li>
+      <li>
+        <Link href="/acoes-server">Ações Server</Link>
+      </li>
+      <li>
+        <Link href="/acoes-client">Ações Client</Link>
       </li>
     </ul>
   );
