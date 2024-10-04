@@ -18,6 +18,9 @@ export default function Menu() {
       <li>
         <Link href="/produtos">Produtos</Link>
       </li>
+      <li>
+        <Link href="/cursos">Cursos</Link>
+      </li>
     </ul>
   );
 }
