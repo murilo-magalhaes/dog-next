@@ -132,5 +132,9 @@ img {
   gap: 1.5rem;
   list-style: none;
   padding: 0;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* Impede quebra de linha */
+  width: 100%; /* Ocupa toda a largura da viewport */
+  overflow-x: auto; /* Adiciona scroll horizontal quando necessário */
+  white-space: nowrap; /* Impede que os itens do menu quebrem de linha */
+  -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
 }

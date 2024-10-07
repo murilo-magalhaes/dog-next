@@ -51,6 +51,9 @@ export default async function Menu() {
       <li>
         <Link href="/cookie">Cookie</Link>
       </li>
+      <li>
+        <Link href="/acoes-cache">Ações Cache</Link>
+      </li>
     </ul>
   );
 }
