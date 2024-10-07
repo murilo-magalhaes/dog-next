@@ -48,6 +48,9 @@ export default async function Menu() {
       <li>
         <Link href="/acoes-client">Ações Client</Link>
       </li>
+      <li>
+        <Link href="/cookie">Cookie</Link>
+      </li>
     </ul>
   );
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { login } from '@/actions/login';
 import React from 'react';
 
 export default function Login() {
@@ -9,15 +10,9 @@ export default function Login() {
   });
 
   const handleSubmit = async () => {
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-    });
+    const res = await login(user);
 
-    if (response.ok) window.location.href = '/';
+    if (res) window.location.href = '/';
   };
 
   return (
