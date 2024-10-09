@@ -13,7 +13,6 @@ export default function HomePage() {
       'segredo',
       (Math.random() * 1000000).toFixed(0).toString(),
     );
-    console.log(response);
     setValor(response.value);
   }
 
