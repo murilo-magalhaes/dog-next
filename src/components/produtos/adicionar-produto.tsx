@@ -1,7 +1,7 @@
 'use client';
 
 import { adicionarProduto } from '@/actions/adicionar-produto';
-import { Produto } from '@/app/produtos/page';
+import { Produto } from '@/components/produtos/produtos-lista';
 import React, { FormEvent } from 'react';
 
 export default function AdicionarProduto() {

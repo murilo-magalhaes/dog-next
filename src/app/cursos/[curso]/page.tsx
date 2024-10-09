@@ -1,4 +1,4 @@
-import { getCurso } from '@/api/cursos';
+import { Aula, getCurso, getCursos } from '@/api/cursos';
 import Link from 'next/link';
 
 type PageParams = {
@@ -6,6 +6,22 @@ type PageParams = {
     curso: string;
   };
 };
+
+export async function generateStaticParams() {
+  const cursos = await getCursos();
+  const aulas = await Promise.all(cursos.map(curso => getCurso(curso.slug)));
+
+  // return cursos.map(c => ({
+  //   curso: c.slug,
+  // }));
+
+  return aulas
+    .reduce((acc: Aula[], curso) => acc.concat(curso.aulas), [])
+    .map(aula => ({
+      aula: aula.slug,
+      curso: cursos.find(c => c.id === aula.curso_id)?.slug,
+    }));
+}
 
 export default async function CursoPage({ params }: PageParams) {
   const curso = await getCurso(params.curso);

@@ -1,9 +1,9 @@
-type Aula = {
-  id: string;
+export type Aula = {
+  id: number;
   slug: string;
   nome: string;
   descricao: string;
-  curso_id: string;
+  curso_id: number;
   tempo: string;
   ordem: string;
 };
