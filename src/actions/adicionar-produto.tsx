@@ -1,6 +1,6 @@
 'use server';
 
-import { Produto } from '@/app/produtos/page';
+import { Produto } from '@/components/produtos/produtos-lista';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
