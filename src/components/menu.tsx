@@ -1,18 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import React from 'react';
 
 export default function Menu() {
   const params = useParams();
   const pathName = usePathname();
 
+  const router = useRouter();
+
   const [pageChanges, setPageChanges] = React.useState(0);
+
+  // React.useEffect(() => {
+  //   console.log({ router });
+  //   setTimeout(() => {
+  //     router.push('/');
+  //   }, 5000);
+  // }, [router]);
 
   React.useEffect(() => {
     setPageChanges(prevState => (prevState += 1));
-    console.log('Rota mudou', pathName);
   }, [pathName]);
 
   return (
