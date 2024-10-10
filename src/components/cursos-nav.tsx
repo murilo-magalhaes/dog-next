@@ -19,7 +19,7 @@ export default function CursosNav() {
   }, []);
 
   return (
-    <div className="flex" style={{ marginRight: '4rem' }}>
+    <div className="flex" style={{ margin: '-1rem', marginRight: '5rem' }}>
       {navVisible && (
         <nav
           style={{
@@ -28,7 +28,12 @@ export default function CursosNav() {
             height: '90vh',
           }}
         >
-          <h1 style={{ textAlign: 'center' }}>Cursos</h1>
+          <h1
+            onClick={() => (window.location.href = '/cursos')}
+            style={{ textAlign: 'center' }}
+          >
+            Cursos
+          </h1>
           <ul style={{ listStyleType: 'none', padding: 10 }}>
             {cursos.map(curso => (
               <li key={curso.id}>
@@ -40,17 +45,15 @@ export default function CursosNav() {
           </ul>
         </nav>
       )}
-      <div className="flex" style={{ alignItems: 'center' }}>
-        <button
-          onClick={() => setNavVisible(prevState => !prevState)}
-          style={{
-            height: '5vh',
-            fontWeight: 'bold',
-          }}
-        >
-          {navVisible ? `<` : '>'}
-        </button>
-      </div>
+      <button
+        onClick={() => setNavVisible(prevState => !prevState)}
+        style={{
+          height: '5vh',
+          fontWeight: 'bold',
+        }}
+      >
+        {navVisible ? `<` : '>'}
+      </button>
     </div>
   );
 }

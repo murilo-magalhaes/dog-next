@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         <Menu />
-        {children}
+        <div style={{ padding: '1rem' }}>{children}</div>
       </body>
     </html>
   );
