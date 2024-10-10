@@ -3,6 +3,7 @@
 import { setCookie } from '@/actions/set-cookie';
 import ClientFetch from '@/components/client-fetch';
 import ServerFetch from '@/components/server-fetch';
+import Script from 'next/script';
 import React from 'react';
 
 export default function HomePage() {
@@ -19,6 +20,18 @@ export default function HomePage() {
   return (
     <main>
       <h1>Home: {valor}</h1>
+
+      <Script
+        id="script-teste"
+        strategy="beforeInteractive"
+        src="https://api.origamid.online/scripts/idade-legal.min.js"
+      ></Script>
+
+      <Script
+        id="google-tag-script"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"
+      ></Script>
 
       <button onClick={handleSetCookie}>Definir cookie</button>
 
