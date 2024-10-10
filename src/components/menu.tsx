@@ -32,6 +32,7 @@ export default function Menu() {
         color: '#fff',
         width: '100vw',
         height: '10vh',
+        minHeight: '7rem',
       }}
     >
       Trocas de página: {pageChanges}
