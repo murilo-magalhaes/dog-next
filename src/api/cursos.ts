@@ -8,7 +8,7 @@ export type Aula = {
   ordem: string;
 };
 
-type Curso = {
+export type Curso = {
   id: number;
   slug: string;
   nome: string;

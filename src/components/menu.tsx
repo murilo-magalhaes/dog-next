@@ -24,43 +24,74 @@ export default function Menu() {
   }, [pathName]);
 
   return (
-    <>
+    <div
+      style={{
+        padding: '10px',
+        paddingBottom: 0,
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '10vh',
+      }}
+    >
       Trocas de página: {pageChanges}
       <ul className="menu">
         <li>
-          <Link href="/">Home</Link>
+          <Link style={{ color: '#fff' }} href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/sobre">Sobre</Link>
+          <Link style={{ color: '#fff' }} href="/sobre">
+            Sobre
+          </Link>
         </li>
         <li>
-          <Link href="/login">Login</Link>
+          <Link style={{ color: '#fff' }} href="/login">
+            Login
+          </Link>
         </li>
         <li>
-          <Link href="/imc">IMC</Link>
+          <Link style={{ color: '#fff' }} href="/imc">
+            IMC
+          </Link>
         </li>
         <li>
-          <Link href="/produtos">Produtos</Link>
+          <Link style={{ color: '#fff' }} href="/produtos">
+            Produtos
+          </Link>
         </li>
         <li>
-          <Link href="/produtos/adicionar">Adicionar produto</Link>
+          <Link style={{ color: '#fff' }} href="/produtos/adicionar">
+            Adicionar produto
+          </Link>
         </li>
         <li>
-          <Link href="/cursos">Cursos</Link>
+          <Link style={{ color: '#fff' }} href="/cursos">
+            Cursos
+          </Link>
         </li>
         <li>
-          <Link href="/acoes-server">Ações Server</Link>
+          <Link style={{ color: '#fff' }} href="/acoes-server">
+            Ações Server
+          </Link>
         </li>
         <li>
-          <Link href="/acoes-client">Ações Client</Link>
+          <Link style={{ color: '#fff' }} href="/acoes-client">
+            Ações Client
+          </Link>
         </li>
         <li>
-          <Link href="/cookie">Cookie</Link>
+          <Link style={{ color: '#fff' }} href="/cookie">
+            Cookie
+          </Link>
         </li>
         <li>
-          <Link href="/acoes-cache">Ações Cache</Link>
+          <Link style={{ color: '#fff' }} href="/acoes-cache">
+            Ações Cache
+          </Link>
         </li>
       </ul>
-    </>
+    </div>
   );
 }

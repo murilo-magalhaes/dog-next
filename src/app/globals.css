@@ -1,3 +1,8 @@
+:root {
+  --primary-color: '#8900bf',
+  --secundary-color: ''
+}
+
 *,
 *::after,
 *::before {
@@ -16,7 +21,7 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin: 0;
 }
 
 body,
@@ -124,7 +129,6 @@ img {
 
 .flex {
   display: flex;
-  gap: 1rem;
 }
 
 .menu {
@@ -133,7 +137,6 @@ img {
   list-style: none;
   padding: 0;
   flex-wrap: nowrap; /* Impede quebra de linha */
-  width: 100%; /* Ocupa toda a largura da viewport */
   overflow-x: auto; /* Adiciona scroll horizontal quando necessário */
   white-space: nowrap; /* Impede que os itens do menu quebrem de linha */
   -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
