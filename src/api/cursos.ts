@@ -16,6 +16,7 @@ type Curso = {
   total_aulas: number;
   total_horas: number;
   aulas: Aula[];
+  error?: string;
 };
 
 export async function getCursos() {
