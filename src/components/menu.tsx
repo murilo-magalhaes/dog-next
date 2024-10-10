@@ -62,6 +62,11 @@ export default function Menu() {
           </Link>
         </li>
         <li>
+          <Link style={{ color: '#fff' }} href="/animais">
+            Animais
+          </Link>
+        </li>
+        <li>
           <Link style={{ color: '#fff' }} href="/produtos/adicionar">
             Adicionar produto
           </Link>

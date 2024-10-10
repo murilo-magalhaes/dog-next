@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from './animais.module.css';
 
 type Animal = {
   id: number;
@@ -17,9 +18,17 @@ export default async function AnimaisPage() {
   return (
     <main>
       <h1>Animais</h1>
+      <Image
+        src="/images/horse.jpg"
+        alt="Cavalo"
+        height={1600}
+        width={2400}
+        sizes="(max-width: 600px) 100vw, 50vw"
+        priority
+      />
 
-      <ul>
-        {animais.map(animal => (
+      <ul className={styles.animais}>
+        {animais.map((animal, i) => (
           <li key={animal.id}>
             <h2>{animal.nome}</h2>
             <Image
@@ -27,7 +36,8 @@ export default async function AnimaisPage() {
               alt={animal.descricao}
               height={1600}
               width={2400}
-              sizes="100vw"
+              sizes="(max-width: 600px) 100vw, 50vw"
+              priority={i < 2}
             />
           </li>
         ))}
