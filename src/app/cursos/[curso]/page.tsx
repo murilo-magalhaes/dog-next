@@ -1,4 +1,5 @@
 import { Aula, getCurso, getCursos } from '@/api/cursos';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 type PageParams = {
@@ -18,9 +19,20 @@ export async function generateStaticParams() {
   return aulas
     .reduce((acc: Aula[], curso) => acc.concat(curso.aulas), [])
     .map(aula => ({
-      aula: aula.slug,
       curso: cursos.find(c => c.id === aula.curso_id)?.slug,
+      aula: aula.slug,
     }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  const curso = await getCurso(params.curso);
+
+  return {
+    title: curso.nome,
+    description: curso.descricao,
+  };
 }
 
 export default async function CursoPage({ params }: PageParams) {
